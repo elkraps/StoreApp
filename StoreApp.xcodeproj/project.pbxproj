@@ -11,6 +11,7 @@
 		CCCC8B412A3ADA800078D2F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC8B402A3ADA800078D2F9 /* ContentView.swift */; };
 		CCCC8B432A3ADA820078D2F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCCC8B422A3ADA820078D2F9 /* Assets.xcassets */; };
 		CCCC8B462A3ADA820078D2F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCCC8B452A3ADA820078D2F9 /* Preview Assets.xcassets */; };
+		CCCC8B4F2A3ADB0B0078D2F9 /* Color + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC8B4E2A3ADB0B0078D2F9 /* Color + ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		CCCC8B402A3ADA800078D2F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CCCC8B422A3ADA820078D2F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCCC8B452A3ADA820078D2F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CCCC8B4E2A3ADB0B0078D2F9 /* Color + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,8 @@
 		CCCC8B3D2A3ADA800078D2F9 /* StoreApp */ = {
 			isa = PBXGroup;
 			children = (
+				CCCC8B4D2A3ADB000078D2F9 /* Extension */,
+				CCCC8B4C2A3ADAFA0078D2F9 /* Screens */,
 				CCCC8B3E2A3ADA800078D2F9 /* StoreAppApp.swift */,
 				CCCC8B402A3ADA800078D2F9 /* ContentView.swift */,
 				CCCC8B422A3ADA820078D2F9 /* Assets.xcassets */,
@@ -65,6 +69,21 @@
 				CCCC8B452A3ADA820078D2F9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CCCC8B4C2A3ADAFA0078D2F9 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		CCCC8B4D2A3ADB000078D2F9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CCCC8B4E2A3ADB0B0078D2F9 /* Color + ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCCC8B412A3ADA800078D2F9 /* ContentView.swift in Sources */,
+				CCCC8B4F2A3ADB0B0078D2F9 /* Color + ext.swift in Sources */,
 				CCCC8B3F2A3ADA800078D2F9 /* StoreAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
