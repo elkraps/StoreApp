@@ -7,41 +7,81 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     @State private var selectedIndex: Int = 0
     private let categories = ["All","Shoes","Bags","Glasses","Accessories","T-Shirts","Hoodies"]
-    
+    private let columns: [GridItem] = [
+        GridItem(.flexible(), spacing: nil, alignment: nil),
+        GridItem(.flexible(), spacing: nil, alignment: nil)
+        
+    ]
     var body: some View {
         ZStack {
             Color(hex: "D3D3D3")
                 .edgesIgnoringSafeArea(.all)
             
-            VStack(alignment: .leading) {
-                AppBarView()
-                
-                SearchBar()
-                
-                SaleView()
-                
-                Text("NEW IN")
-                    .font(.system(size: 25, weight: .bold))
-                    .padding(.leading)
-                    .padding(.bottom, -15)
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {
-                        ForEach(0 ..< categories.count) { item in
-                            CategoryView(isActive: item == selectedIndex, text: categories[item])
-                                .onTapGesture {
-                                    selectedIndex = item
-                                }
+            ScrollView {
+                VStack(alignment: .leading) {
+                    AppBarView()
+                    
+                    SearchBar()
+                    
+                    SaleView()
+                    
+                    Text("NEW IN")
+                        .font(.system(size: 25, weight: .bold))
+                        .padding(.leading)
+                        .padding(.bottom, -15)
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            ForEach(0 ..< categories.count) { item in
+                                CategoryView(isActive: item == selectedIndex, text: categories[item])
+                                    .onTapGesture {
+                                        selectedIndex = item
+                                    }
+                            }
                         }
                     }
+                    .padding()
+                    
+                    
+                    ScrollView {
+                        LazyVGrid(columns: columns) {
+                            ForEach(0..<20) { index in
+                                VStack(alignment: .leading, spacing: 3) {
+                                    Image("nike_1")
+                                        .resizable()
+                                        .scaledToFill()
+                                        .cornerRadius(10)
+                                    
+                                    Text("Nike Custom Sneekers")
+                                        .font(.system(size: 15, weight: .medium))
+                                        
+                                    
+                                    HStack {
+                                        Text("$51,58")
+                                            .font(.system(size: 15))
+                                        
+                                        Spacer()
+                                        
+                                        Button {
+                                            
+                                        } label: {
+                                            Image(systemName: "heart")
+                                                .foregroundColor(.black)
+                                        }
+
+                                    }
+                                    .opacity(0.5)
+                                }
+                            }
+                        }
+                        .padding()
+                    }
+                    .padding(.top, -15)
                 }
-                .padding()
-                
-                
-                
             }
         }
     }
@@ -136,7 +176,7 @@ struct SaleView: View {
             Image("sneek")
                 .resizable()
                 .scaledToFill()
-                .frame(width: .infinity, height: 150)
+//                .frame(width: .infinity, height: 150)
                 .cornerRadius(25)
                 .padding()
                 .overlay(ImageOverlay(), alignment: .leading)
@@ -162,6 +202,5 @@ struct CategoryView: View {
                     .clipShape(Capsule())
             }
         }
-
     }
 }
