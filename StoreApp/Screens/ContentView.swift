@@ -14,8 +14,10 @@ struct ContentView: View {
     private let columns: [GridItem] = [
         GridItem(.flexible(), spacing: nil, alignment: nil),
         GridItem(.flexible(), spacing: nil, alignment: nil)
-        
     ]
+    @EnvironmentObject private var sm: StoreViewModel
+//    let goods: StoreModel
+    
     var body: some View {
         ZStack {
             Color(hex: "D3D3D3")
@@ -51,7 +53,7 @@ struct ContentView: View {
                         LazyVGrid(columns: columns) {
                             ForEach(0..<20) { index in
                                 VStack(alignment: .leading, spacing: 3) {
-                                    Image("nike_1")
+                                    Image("nike_2")
                                         .resizable()
                                         .scaledToFill()
                                         .cornerRadius(10)
@@ -176,7 +178,7 @@ struct SaleView: View {
             Image("sneek")
                 .resizable()
                 .scaledToFill()
-//                .frame(width: .infinity, height: 150)
+                .frame(width: .infinity, height: 150)
                 .cornerRadius(25)
                 .padding()
                 .overlay(ImageOverlay(), alignment: .leading)
