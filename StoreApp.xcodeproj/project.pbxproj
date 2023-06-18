@@ -16,6 +16,7 @@
 		CCCC8B552A3C37130078D2F9 /* StoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC8B542A3C37130078D2F9 /* StoreDataService.swift */; };
 		CCCC8B582A3D896A0078D2F9 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC8B572A3D896A0078D2F9 /* StoreViewModel.swift */; };
 		CCCC8B5A2A3D8F440078D2F9 /* GoodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC8B592A3D8F440078D2F9 /* GoodsView.swift */; };
+		CCCC8B5C2A3EDA310078D2F9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC8B5B2A3EDA310078D2F9 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		CCCC8B542A3C37130078D2F9 /* StoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDataService.swift; sourceTree = "<group>"; };
 		CCCC8B572A3D896A0078D2F9 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
 		CCCC8B592A3D8F440078D2F9 /* GoodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsView.swift; sourceTree = "<group>"; };
+		CCCC8B5B2A3EDA310078D2F9 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			children = (
 				CCCC8B402A3ADA800078D2F9 /* ContentView.swift */,
 				CCCC8B592A3D8F440078D2F9 /* GoodsView.swift */,
+				CCCC8B5B2A3EDA310078D2F9 /* DetailView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCCC8B412A3ADA800078D2F9 /* ContentView.swift in Sources */,
+				CCCC8B5C2A3EDA310078D2F9 /* DetailView.swift in Sources */,
 				CCCC8B552A3C37130078D2F9 /* StoreDataService.swift in Sources */,
 				CCCC8B522A3C366A0078D2F9 /* StoreModel.swift in Sources */,
 				CCCC8B5A2A3D8F440078D2F9 /* GoodsView.swift in Sources */,

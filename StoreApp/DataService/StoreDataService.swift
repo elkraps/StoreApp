@@ -53,7 +53,7 @@ class StoreDataService {
             description: "Legendary feat with Kaney West."),
         
         StoreModel(
-            name: "Hearts",
+            name: "Duck?",
             price: "$5,99",
             imageName: "acc_1",
             categories: "Accessories",
@@ -81,7 +81,7 @@ class StoreDataService {
             description: ""),
         
         StoreModel(
-            name: "Nike",
+            name: "Duck-Bag?",
             price: "$15,99",
             imageName: "bag_1",
             categories: "Bags",
@@ -116,14 +116,14 @@ class StoreDataService {
             description: ""),
         
         StoreModel(
-            name: "Pink glasses",
+            name: "Classic",
             price: "$7,99",
             imageName: "glass_1",
             categories: "Glasses",
             description: ""),
         
         StoreModel(
-            name: "Rainy",
+            name: "Fier",
             price: "$9,50",
             imageName: "glass_2",
             categories: "Glasses",

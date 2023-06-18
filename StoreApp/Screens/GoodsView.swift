@@ -8,36 +8,38 @@
 import SwiftUI
 
 struct GoodsView: View {
-    @EnvironmentObject private var sm: StoreViewModel
+//    @EnvironmentObject private var sm: StoreViewModel
     let goods: StoreModel
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 3) {
-            Image(goods.imageName)
-                .resizable()
-                .frame(width: 200, height: 200)
-                .scaledToFill()
-                .cornerRadius(10)
-            
-            Text(goods.name)
-                .font(.system(size: 15, weight: .medium))
-            
-            HStack {
-                Text(goods.price)
-                    .font(.system(size: 15))
+        ZStack(alignment: .bottom) {
+            VStack(alignment: .leading) {
+                Image(goods.imageName)
+                    .resizable()
+                    .cornerRadius(20)
+                    .frame(width: 180)
+                    .scaledToFit()
                 
-                Spacer()
+                Text(goods.name)
+                    .font(.system(size: 15, weight: .medium))
                 
-                Button {
+                HStack {
+                    Text(goods.price)
+                        
                     
-                } label: {
-                    Image(systemName: "heart")
-                        .foregroundColor(.black)
+                    Spacer()
+                    
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "heart")
+                            .foregroundColor(.black)
+                    }
                 }
-                
+                .opacity(0.8)
             }
-            .opacity(0.5)
         }
+        .frame(width: 180, height: 250)
     }
 }
 
