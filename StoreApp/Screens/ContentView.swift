@@ -10,14 +10,15 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selectedIndex: Int = 0
+    
     private let categories = ["All","Shoes","Bags","Glasses","Accessories","T-Shirts","Hoodies"]
     
     private let columns: [GridItem] = [
         GridItem(.flexible(), spacing: nil, alignment: nil),
         GridItem(.flexible(), spacing: nil, alignment: nil)
     ]
+    
     @EnvironmentObject private var sm: StoreViewModel
-//    let goods: StoreModel
     
     var body: some View {
         NavigationView {
@@ -55,7 +56,7 @@ struct ContentView: View {
                             LazyVGrid(columns: columns) {
                                 ForEach(StoreDataService.storeGoods, id: \.id) { items in
                                     NavigationLink(
-                                        destination: DetailView()){
+                                        destination: DetailView(goods: items)){
                                             GoodsView(goods: items)
                                                 .padding(8)
                                         }

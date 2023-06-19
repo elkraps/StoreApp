@@ -46,6 +46,6 @@ struct GoodsView: View {
 struct GoodsView_Previews: PreviewProvider {
     static var previews: some View {
         GoodsView(goods: StoreDataService.storeGoods.first!)
-            .environmentObject(StoreViewModel())
+//            .environmentObject(StoreViewModel())
     }
 }

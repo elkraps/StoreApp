@@ -15,4 +15,5 @@ class StoreViewModel: ObservableObject {
         let goods = StoreDataService.storeGoods
         self.goods = goods
     }
+   
 }
