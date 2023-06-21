@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct GoodsView: View {
-//    @EnvironmentObject private var sm: StoreViewModel
+    @EnvironmentObject private var vm: StoreViewModel
+    
     let goods: StoreModel
     
     var body: some View {
@@ -24,13 +25,13 @@ struct GoodsView: View {
                     .font(.system(size: 15, weight: .medium))
                 
                 HStack {
-                    Text(goods.price)
+                    Text("$\(goods.price.formatted())")
                         
                     
                     Spacer()
                     
                     Button {
-                        
+                        vm.addToWishlist(product: goods)
                     } label: {
                         Image(systemName: "heart")
                             .foregroundColor(.black)
@@ -46,6 +47,6 @@ struct GoodsView: View {
 struct GoodsView_Previews: PreviewProvider {
     static var previews: some View {
         GoodsView(goods: StoreDataService.storeGoods.first!)
-//            .environmentObject(StoreViewModel())
+            .environmentObject(StoreViewModel())
     }
 }

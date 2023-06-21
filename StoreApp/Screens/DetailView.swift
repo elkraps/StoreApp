@@ -12,6 +12,7 @@ import SwiftUI
 struct DetailView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject private var vm: StoreViewModel
     
     private let sizes = ["40","41","42","43","44","45","46"]
     
@@ -90,7 +91,7 @@ struct DetailView: View {
                         Spacer()
                         
                         HStack(spacing: 35) {
-                            Text(goods.price)
+                            Text("$\(goods.price.formatted())")
                                 .font(.system(size:25, weight: .bold))
                                 
                             
@@ -149,7 +150,7 @@ struct DetailView: View {
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
-                    
+                    vm.addToWishlist(product: goods)
                 } label: {
                     Image(systemName: "heart")
                         .padding(.all, 12)
@@ -167,6 +168,7 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         DetailView(goods: StoreDataService.storeGoods.first!)
+            .environmentObject(StoreViewModel())
     }
 }
 

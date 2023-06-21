@@ -9,7 +9,7 @@ import Foundation
 
 struct StoreModel: Equatable, Identifiable {
     let name: String
-    let price: String
+    let price: Double
     let imageName: String
     let categories: String
     let description: String

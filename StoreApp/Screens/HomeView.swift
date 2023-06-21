@@ -8,8 +8,9 @@
 import SwiftUI
 
 
-struct ContentView: View {
+struct HomeView: View {
     @State private var selectedIndex: Int = 0
+    @EnvironmentObject private var vm: StoreViewModel
     
     private let categories = ["All","Shoes","Bags","Glasses","Accessories","T-Shirts","Hoodies"]
     
@@ -77,7 +78,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }
 
