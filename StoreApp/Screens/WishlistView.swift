@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WishlistView: View {
     @EnvironmentObject var sm: StoreViewModel
+    
     var body: some View {
         ScrollView {
             if sm.goods.count > 0 {
@@ -17,7 +18,10 @@ struct WishlistView: View {
                 }
                 
             } else {
+                
                 Text("Your wishlist is empty :(")
+                    .padding(.all, 100)
+                
             }
         }
     }

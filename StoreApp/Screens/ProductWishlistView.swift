@@ -19,32 +19,69 @@ struct ProductWishlistView: View {
                     .frame(width: 100, height: 100)
                     .scaledToFit()
                     .cornerRadius(10)
-                    
                 
                 VStack(alignment: .leading) {
-                    Text(goods.name)
-                        .font(.system(size: 18,weight: .bold))
-                    
-                    Text("Color: blah-blah")
-                        .font(.system(size: 15, weight: .light))
-                        .opacity(0.8)
-                    
-                    Text("$\(goods.price.formatted())")
-                        .bold()
-                }
-                
-                Spacer()
-                
-                Image(systemName: "xmark")
-                    .foregroundColor(.black)
-                    .onTapGesture {
-                        sm.removeFromCart(product: goods)
+                    HStack {
+                        VStack(alignment: .leading){
+                            Text(goods.name)
+                                .font(.system(size: 20, weight: .semibold))
+                            
+                            Text("Size: blah / Color: blah")
+                                .font(.system(size: 15, weight: .light))
+                                .opacity(0.8)
+                            
+                        }
+                        
+                        Spacer()
+                        
+                        Image(systemName: "xmark")
+                            .foregroundColor(.black)
+                            .onTapGesture {
+                                sm.removeFromCart(product: goods)
+                            }
+                            .padding(.bottom, 20)
                     }
+                    
+                    HStack {
+                        
+                        Text("$\(goods.price.formatted())")
+                            .font(.system(size: 20, weight: .bold))
+                        
+                        Spacer()
+                        
+                        HStack {
+                            Button {
+                                
+                            } label: {
+                                Image(systemName: "minus")
+                                    .padding(.all, 5)
+                            }
+                            .frame(width: 25, height: 25)
+                            .overlay(RoundedRectangle(cornerRadius: 50).stroke())
+                            .foregroundColor(.black)
+                            
+                            
+                            Text("1")
+                                .font(.title2)
+                                .fontWeight(.medium)
+                                    .padding(.horizontal, 5)
+                            
+                            Button {
+                                
+                            } label: {
+                                Image(systemName: "plus")
+                                    .padding(.all, 5)
+                            }
+                            .frame(width: 25, height: 25)
+                            .overlay(RoundedRectangle(cornerRadius: 50).stroke())
+                            .foregroundColor(.black)
+                        }
+                    }
+                }
             }
         }
         .padding(.horizontal)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.red)
     }
 }
 

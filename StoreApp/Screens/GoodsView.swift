@@ -31,7 +31,7 @@ struct GoodsView: View {
                     Spacer()
                     
                     Button {
-                        vm.addToWishlist(product: goods)
+                        vm.addToCart(product: goods)
                     } label: {
                         Image(systemName: "heart")
                             .foregroundColor(.black)

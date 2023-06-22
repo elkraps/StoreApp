@@ -12,12 +12,12 @@ class StoreViewModel: ObservableObject {
     @Published var goods: [StoreModel] = []
     @Published var total: Int = 0
     
-    init() {
-        let goods = StoreDataService.storeGoods
-        self.goods = goods
-    }
+//    init() {
+//        let goods = StoreDataService.storeGoods
+//        self.goods = goods
+//    }
    
-    func addToWishlist(product: StoreModel) {
+    func addToCart(product: StoreModel) {
         goods.append(product)
         total += Int(product.price)
     }

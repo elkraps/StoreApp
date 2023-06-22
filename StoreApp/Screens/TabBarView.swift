@@ -27,7 +27,7 @@ struct TabBarView: View {
                 Color.yellow
                     .tag("Cart")
                     
-                Color.yellow
+                ProfileView()
                     .tag("Profile")
                     
             }

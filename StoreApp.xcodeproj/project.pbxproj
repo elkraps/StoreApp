@@ -20,6 +20,7 @@
 		CCCC8B692A4352360078D2F9 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC8B682A4352360078D2F9 /* TabBarView.swift */; };
 		CCCC8B6B2A435FEA0078D2F9 /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC8B6A2A435FEA0078D2F9 /* WishlistView.swift */; };
 		CCCC8B6D2A4368020078D2F9 /* ProductWishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC8B6C2A4368020078D2F9 /* ProductWishlistView.swift */; };
+		CCCC8B6F2A4421050078D2F9 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC8B6E2A4421050078D2F9 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		CCCC8B682A4352360078D2F9 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		CCCC8B6A2A435FEA0078D2F9 /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistView.swift; sourceTree = "<group>"; };
 		CCCC8B6C2A4368020078D2F9 /* ProductWishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductWishlistView.swift; sourceTree = "<group>"; };
+		CCCC8B6E2A4421050078D2F9 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				CCCC8B682A4352360078D2F9 /* TabBarView.swift */,
 				CCCC8B6A2A435FEA0078D2F9 /* WishlistView.swift */,
 				CCCC8B6C2A4368020078D2F9 /* ProductWishlistView.swift */,
+				CCCC8B6E2A4421050078D2F9 /* ProfileView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				CCCC8B412A3ADA800078D2F9 /* HomeView.swift in Sources */,
 				CCCC8B5C2A3EDA310078D2F9 /* DetailView.swift in Sources */,
 				CCCC8B552A3C37130078D2F9 /* StoreDataService.swift in Sources */,
+				CCCC8B6F2A4421050078D2F9 /* ProfileView.swift in Sources */,
 				CCCC8B6B2A435FEA0078D2F9 /* WishlistView.swift in Sources */,
 				CCCC8B522A3C366A0078D2F9 /* StoreModel.swift in Sources */,
 				CCCC8B5A2A3D8F440078D2F9 /* GoodsView.swift in Sources */,

@@ -67,81 +67,10 @@ struct DetailView: View {
                         .padding(.bottom)
                     }
                     
-                    VStack {
-                        HStack {
-                            Text(goods.name)
-                                .font(.system(size: 20, weight: .bold))
-                            Spacer()
-                            HStack(spacing: 0) {
-                                ForEach(0 ..< 5) { item in
-                                    Image(systemName: "star.fill")
-                                }
-                            }
-                        }
-                        
-                        HStack {
-                            Text("Size: 42")
-                            
-                            Spacer()
-                            
-                            Text("(64 Reviews)")
-                        }
-                        .opacity(0.6)
-                        
-                        Spacer()
-                        
-                        HStack(spacing: 35) {
-                            Text("$\(goods.price.formatted())")
-                                .font(.system(size:25, weight: .bold))
-                                
-                            
-                            HStack {
-                                Button {
-                                    
-                                } label: {
-                                    Image(systemName: "minus")
-                                        .padding(.all, 5)
-                                }
-                                .frame(width: 30, height: 30)
-                                .foregroundColor(.black)
-                                
-                                Text("1")
-                                    .font(.title2)
-                                    .fontWeight(.medium)
-//                                    .padding(.horizontal, 5)
-                                
-                                Button {
-                                    
-                                } label: {
-                                    Image(systemName: "plus")
-                                        .padding(.all, 5)
-                                }
-                                .frame(width: 30, height: 30)
-                                .foregroundColor(.black)
-                            }
-                            .overlay(RoundedRectangle(cornerRadius: 50).stroke())
-                            
-                            Button {
-                                
-                            } label: {
-                                Text("Buy")
-                                    .frame(width: 80, height: 30)
-//                                    .padding(.all, 10)
-                                    .background(RoundedRectangle(cornerRadius: 15).fill(.black))
-                                    .foregroundColor(.white)
-                                    
-                            }
-                        }
-                    }
-                    
-                    .padding(.all, 15)
-                    .frame(height: 140)
-                    .background(Color.white)
-                    .cornerRadius(25)
+                    AboutView(text: goods.name, price: goods.price)
                 }
             }
             .padding()
-            
         }
         .navigationBarBackButtonHidden(true)
         .toolbar {
@@ -150,7 +79,7 @@ struct DetailView: View {
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
-                    vm.addToWishlist(product: goods)
+                    vm.addToCart(product: goods)
                 } label: {
                     Image(systemName: "heart")
                         .padding(.all, 12)
@@ -217,8 +146,82 @@ struct ShoesSizeView: View {
                     .background(RoundedRectangle(cornerRadius: 20).stroke(Color.black, lineWidth: 1))
                     .foregroundColor(.black)
             }
-            
-            
         }
+    }
+}
+
+struct AboutView: View {
+    let text: String
+    let price: Double
+    
+    var body: some View {
+        VStack {
+            HStack {
+                Text(text)
+                    .font(.system(size: 20, weight: .bold))
+                Spacer()
+                HStack(spacing: 0) {
+                    ForEach(0 ..< 5) { item in
+                        Image(systemName: "star.fill")
+                    }
+                }
+            }
+            
+            HStack {
+                Text("Size: 42")
+                
+                Spacer()
+                
+                Text("(64 Reviews)")
+            }
+            .opacity(0.6)
+            
+            Spacer()
+            
+            HStack(spacing: 35) {
+                Text("$\(price.formatted())")
+                    .font(.system(size:25, weight: .bold))
+                
+                
+                HStack {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "minus")
+                            .padding(.all, 5)
+                    }
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(.black)
+                    
+                    Text("1")
+                        .font(.title2)
+                        .fontWeight(.medium)
+                    
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "plus")
+                            .padding(.all, 5)
+                    }
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(.black)
+                }
+                .overlay(RoundedRectangle(cornerRadius: 50).stroke())
+                
+                Button {
+                    
+                } label: {
+                    Text("Buy")
+                        .frame(width: 80, height: 30)
+                        .background(RoundedRectangle(cornerRadius: 15).fill(.black))
+                        .foregroundColor(.white)
+                }
+            }
+        }
+        
+        .padding(.all, 15)
+        .frame(height: 140)
+        .background(Color.white)
+        .cornerRadius(25)
     }
 }
