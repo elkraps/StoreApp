@@ -21,15 +21,7 @@ struct ProfileView: View {
                 
                 StatView()
                 
-                
-                VStack(alignment: .leading) {
-                    Text("Personal Information")
-                    
-                    
-                    VStack {
-                        
-                    }
-                }
+                PersonalInfoView()
                 
             }
         }
@@ -145,5 +137,56 @@ struct StatView: View {
         .background(Color.white)
         .cornerRadius(25)
         .padding(.top, 10)
+    }
+}
+
+struct PersonalInfoView: View {
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("Personal Information")
+                .font(.system(size: 25, weight: .bold))
+                .padding(.bottom, 3)
+            
+            VStack(spacing: 10) {
+                HStack{
+                    Text("Name:")
+                        .font(.system(size: 18))
+                        .opacity(0.5)
+                    Spacer()
+                    Text("Rakim Athelston Mayers")
+                        .font(.system(size: 18, weight: .semibold))
+                    
+                }
+                HStack{
+                    Text("Email:")
+                        .font(.system(size: 18))
+                        .opacity(0.5)
+                    Spacer()
+                    Text(verbatim: "asapRocky@gmail.bombom")
+                        .font(.system(size: 18, weight: .semibold))
+                        .foregroundColor(.black)
+                }
+                HStack{
+                    Text("Location:")
+                        .font(.system(size: 18))
+                        .opacity(0.5)
+                    Spacer()
+                    Text("Los Angeles CA")
+                        .font(.system(size: 18, weight: .semibold))
+                }
+                HStack{
+                    Text("Zip Code:")
+                        .font(.system(size: 18))
+                        .opacity(0.5)
+                    Spacer()
+                    Text("78577")
+                        .font(.system(size: 18, weight: .semibold))
+                }
+            }
+            .padding(.all, 15)
+            .background(Color.white)
+            .cornerRadius(25)
+        }
+        .padding()
     }
 }

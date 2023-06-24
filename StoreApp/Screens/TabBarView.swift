@@ -15,6 +15,7 @@ struct TabBarView: View {
     init() {
         UITabBar.appearance().isHidden = true
     }
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $selectTab) {
@@ -24,7 +25,7 @@ struct TabBarView: View {
                 WishlistView()
                     .tag("Wishlist")
                     
-                Color.yellow
+                CartView()
                     .tag("Cart")
                     
                 ProfileView()

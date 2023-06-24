@@ -10,7 +10,7 @@ import Foundation
 class StoreViewModel: ObservableObject {
     
     @Published var goods: [StoreModel] = []
-    @Published var total: Int = 0
+    @Published var total: Double = 0
     
 //    init() {
 //        let goods = StoreDataService.storeGoods
@@ -19,11 +19,11 @@ class StoreViewModel: ObservableObject {
    
     func addToCart(product: StoreModel) {
         goods.append(product)
-        total += Int(product.price)
+        total += product.price
     }
     
     func removeFromCart(product: StoreModel) {
         goods = goods.filter { $0.id != product.id }
-        total -= Int(product.price)
+        total -= product.price
     }
 }
