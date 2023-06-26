@@ -51,7 +51,8 @@ struct DetailView: View {
                                 .font(.system(size: 20, weight: .bold))
                             
                             HStack(spacing: 15) {
-                                Text("s/m/l")
+                                Text("S / M / L")
+                                    .font(.system(size: 15, weight: .light))
                             }
                         }
                         .padding(.bottom)
@@ -61,7 +62,8 @@ struct DetailView: View {
                                 .font(.system(size: 20, weight: .bold))
                             
                             HStack(spacing: 15) {
-                                Text("Univarsal size")
+                                Text("Universal size")
+                                    .font(.system(size: 15, weight: .light))
                             }
                         }
                         .padding(.bottom)
@@ -71,6 +73,7 @@ struct DetailView: View {
                 }
             }
             .padding()
+            .padding(.bottom, 30)
         }
         .navigationBarBackButtonHidden(true)
         .toolbar {

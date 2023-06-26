@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StoreModel: Equatable, Identifiable {
+struct StoreModel: Equatable, Identifiable, Codable {
     let name: String
     let price: Double
     let imageName: String

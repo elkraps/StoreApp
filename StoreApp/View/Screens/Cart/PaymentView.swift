@@ -14,22 +14,65 @@ struct PaymentView: View {
                 .edgesIgnoringSafeArea(.all)
             
             ScrollView {
+                
                 Text("Payment Method")
                     .font(.system(size: 25, weight: .bold))
-                
-                CardView()
+                    .padding(.top, 30)
                 
                 VStack(alignment: .leading) {
                     
-                    Text("CardHolder Name")
-                        .font(.system(size: 15))
-                        .opacity(0.7)
-                    Text("Ex: Rakim Athelston Mayers")
-                        .font(.system(size: 18))
+                    CardView()
+                    
+                    
+                    VStack(alignment: .leading, spacing: 5) {
+                        
+                        Text("CardHolder Name")
+                            .font(.system(size: 15))
+                            .opacity(0.7)
+                        
+                        Text("Ex: Rakim Athelston Mayers")
+                            .font(.system(size: 18))
+                        
+                    }
+                    .padding(7)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Color.white)
+                    .cornerRadius(15)
+                    .padding(.all, 15)
+                    
+
+                    VStack(alignment: .leading, spacing: 5) {
+                        
+                        Text("Card Number")
+                            .font(.system(size: 15))
+                            .opacity(0.7)
+
+                        Text("**** **** **** 1289")
+                            .font(.system(size: 18))
+                    }
+                    .padding(7)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Color.white)
+                    .cornerRadius(15)
+                    .padding(.all, 15)
+
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("Valid thru")
+                            .font(.system(size: 15))
+                            .opacity(0.7)
+
+                        Text("09/25")
+                            .font(.system(size: 18))
+                    }
+                    .padding(7)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Color.white)
+                    .cornerRadius(15)
+                    .padding(.all, 15)
+                    
                 }
-                .background()
-                
             }
+            
         }
     }
 }
@@ -67,6 +110,7 @@ struct CardView: View {
                         Circle()
                             .frame(width: 35, height: 35)
                             .foregroundColor(.yellow)
+                            .opacity(0.8)
                     }
                     
                     Text("mastercard")

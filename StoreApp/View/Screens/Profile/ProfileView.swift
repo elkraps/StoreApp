@@ -188,5 +188,6 @@ struct PersonalInfoView: View {
             .cornerRadius(25)
         }
         .padding()
+        .padding(.bottom, 25)
     }
 }

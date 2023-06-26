@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProductWishlistView: View {
+struct ProductView: View {
     @EnvironmentObject var sm: StoreViewModel
     var goods: StoreModel
     
@@ -87,7 +87,7 @@ struct ProductWishlistView: View {
 
 struct ProductWishlistView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductWishlistView(goods: StoreDataService.storeGoods.first!)
+        ProductView(goods: StoreDataService.storeGoods.first!)
             .environmentObject(StoreViewModel())
     }
 }

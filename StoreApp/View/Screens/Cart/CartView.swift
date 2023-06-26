@@ -25,7 +25,7 @@ struct CartView: View {
                 VStack {
                     if sm.goods.count > 0 {
                         ForEach(sm.goods, id: \.id) { product in
-                            ProductWishlistView(goods: product)
+                            ProductView(goods: product)
                         }
                     } else {
                         
@@ -33,7 +33,7 @@ struct CartView: View {
                             .padding()
                     }
                 }
-                .padding(.bottom, 250)
+                
                 
                 PromocodeView()
                 
@@ -52,9 +52,12 @@ struct CartView: View {
                     }
                 }
                 .padding()
+                .padding(.bottom, 25)
             }
             .sheet(isPresented: $isBottomSheetShow) {
                 PaymentView()
+                    .presentationDetents([.height(600)])
+                    
             }
         }
     }
@@ -119,7 +122,7 @@ struct TotalView: View {
                 Text("Bag Total")
                     .font(.system(size: 18, weight: .semibold))
                 Spacer()
-                Text("$\(sm.total.formatted() + ship.formatted())")
+                Text("$\(sm.total.formatted())")
                     .font(.system(size: 18, weight: .semibold))
             }
         }
